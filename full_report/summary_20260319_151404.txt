@@ -1,0 +1,62 @@
+================================================================================
+TRAFFIC SIGNAL RL PROJECT - COMPLETE REPORT
+Generated: 2026-03-19 15:14:04
+================================================================================
+
+============================================================
+EVALUATION RESULTS
+============================================================
+
+RL Agent:
+  Mean Reward: -2.190
+  Std Reward: 2.568
+  Mean Queue: 6.70 cars
+  Std Queue: 6.57 cars
+
+Fixed Timer:
+  Mean Reward: -5.354
+  Std Reward: 4.753
+  Mean Queue: 10.25 cars
+  Std Queue: 7.98 cars
+
+Random Agent:
+  Mean Reward: -4.543
+  Std Reward: 4.945
+  Mean Queue: 9.11 cars
+  Std Queue: 7.57 cars
+
+============================================================
+ML MODELS COMPARISON
+============================================================
+
+RandomForest:
+  MAE: 4.328
+  R?: 0.731
+
+LinearRegression:
+  MAE: 6.694
+  R?: 0.610
+
+SVR:
+  MAE: 4.462
+  R?: 0.750
+
+============================================================
+TRAINING SUMMARY
+============================================================
+
+Total Episodes: 3000
+Final Avg Reward (last 50): -1.932
+Final Avg Queue (last 50): 6.49 cars
+Best Reward: 0.000
+Best Queue: 0.00 cars
+
+============================================================
+KEY RESULT
+============================================================
+
+[OK] RL Agent improves by 34.6% over Fixed Timer!
+   RL Queue: 6.70 cars
+   Fixed Queue: 10.25 cars
+
+================================================================================

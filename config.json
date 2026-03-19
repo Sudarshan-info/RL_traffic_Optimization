@@ -1,0 +1,74 @@
+{
+    "project": {
+        "name": "Traffic Signal RL",
+        "version": "3.0",
+        "date": "2024"
+    },
+    "data": {
+        "n_days": 30,
+        "n_intersections": 5,
+        "base_arrival": 8,
+        "random_seed": 42
+    },
+    "agent": {
+        "alpha": 0.3,
+        "gamma": 0.95,
+        "epsilon_start": 1.0,
+        "epsilon_min": 0.01,
+        "epsilon_decay": 0.995
+    },
+    "environment": {
+        "n_queue_bins": 10,
+        "n_hour_bins": 6,
+        "max_steps_per_episode": 50,
+        "max_queue": 50,
+        "discharge_rate": 0.5,
+        "queue_clamp_min": 5,
+        "queue_clamp_max": 25,
+        "reward_scale": 10.0,
+        "green_times": [
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45,
+            50,
+            55
+        ]
+    },
+    "training": {
+        "n_episodes": 2000,
+        "log_interval": 50,
+        "test_interval": 100,
+        "test_episodes": 10,
+        "save_model": true
+    },
+    "ml_models": {
+        "train": true,
+        "test_size": 0.2,
+        "random_forest": {
+            "n_estimators": 100
+        },
+        "svr": {
+            "C": 10,
+            "epsilon": 0.5
+        }
+    },
+    "evaluation": {
+        "n_episodes": 100,
+        "fixed_timer_action": 4
+    },
+    "visualization": {
+        "smoothing_window": 50,
+        "figure_dpi": 150,
+        "style": "whitegrid"
+    },
+    "reporting": {
+        "generate_pdf": true,
+        "include_charts": true,
+        "save_metrics_csv": true
+    }
+}

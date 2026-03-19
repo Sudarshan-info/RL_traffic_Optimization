@@ -1,9 +1,39 @@
-__pycache__/ 
-*.pyc 
-*.pyo 
-venv/ 
-.env 
-*.egg-info/ 
-.DS_Store 
-Thumbs.db 
-*.log 
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Logs and generated data (but keep the folders)
+logs/*.json
+logs/*.npy
+!logs/.gitkeep
+
+# Models (too large for GitHub)
+models/*.npy
+models/*.pkl
+!models/.gitkeep
+
+# Reports (optional - can keep if small)
+reports/*.csv
+reports/*.txt
+!reports/.gitkeep
+
+# Results/charts (keep these - they're small PNGs)
+# results/ - we DO want to keep these for presentation
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Windows
+Thumbs.db
+desktop.ini
+.DS_Store
